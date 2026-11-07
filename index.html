@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#101513">
+  <title>Dead Zone — Last Stand</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <canvas id="game" aria-label="Zombie survival game"></canvas>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Dead Zone home"><span class="brand-mark">✳</span> DEAD<span>ZONE</span></a>
+      <div class="hud">
+        <div class="hud-block wave-block"><span class="eyebrow">SECTOR</span><strong id="wave">01</strong></div>
+        <div class="hud-block"><span class="eyebrow">INFECTED</span><strong id="kills">0 <small>/ 8</small></strong></div>
+        <div class="hud-block health-block"><span class="eyebrow">VITALS</span><div class="health-track"><i id="health-fill"></i></div><b id="health-text">100%</b></div>
+        <div class="hud-block ammo-block"><span class="eyebrow">AMMO</span><strong id="ammo">12 <small>/ ∞</small></strong></div>
+      </div>
+      <button id="sound-btn" class="sound-btn" title="Toggle sound" aria-label="Toggle sound">♫</button>
+    </header>
+    <div class="level-tag"><span class="live-dot"></span><span id="zone-name">ABANDONED DISTRICT</span><span class="tag-divider">/</span><span id="objective">CLEAR THE AREA</span></div>
+    <div class="wave-banner" id="wave-banner"><span>WAVE 01</span><b>THEY'RE COMING</b></div>
+    <div class="overlay" id="overlay">
+      <div class="overlay-card" id="overlay-card">
+        <div class="kicker"><span class="kicker-line"></span> EMERGENCY BROADCAST <span class="kicker-line"></span></div>
+        <h1 id="overlay-title">LAST<br><em>STAND</em></h1>
+        <p id="overlay-copy">The city fell at sundown. Make it through the night.<br>They don't stop coming.</p>
+        <button id="play-btn" class="primary-btn"><span>▶</span> <b>START SURVIVING</b> <span class="button-arrow">↗</span></button>
+        <div class="controls-hint"><span>W A S D</span> MOVE <i>·</i> <span>MOUSE</span> AIM <i>·</i> <span>CLICK</span> FIRE</div>
+      </div>
+    </div>
+    <footer class="bottom-bar"><span>⚠ OUTBREAK ZONE · NO EXTRACTION AVAILABLE</span><span class="desktop-hint">WAVE <b id="footer-wave">01</b> <i>·</i> SURVIVE TO ADVANCE</span><button id="pause-btn" aria-label="Pause game">Ⅱ</button></footer>
+    <div id="touch-controls" class="touch-controls" aria-hidden="true"><div class="joystick" id="joystick"><span></span></div><button id="fire-btn" class="fire-btn">FIRE</button></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
